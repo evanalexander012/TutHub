@@ -65,8 +65,12 @@ public class TutorActivity extends AppCompatActivity {
             }
         });
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("test");
+        DatabaseReference myRef = database.getReference();
 
+        Log.d("BOOM", myRef.toString());
+
+        myRef = database.getReference("test");
+        myRef.setValue("Whats up");
         // Read from the database
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
