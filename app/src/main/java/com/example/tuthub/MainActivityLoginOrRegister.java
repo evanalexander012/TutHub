@@ -6,6 +6,8 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivityLoginOrRegister extends AppCompatActivity {
@@ -46,6 +48,24 @@ public class MainActivityLoginOrRegister extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        //configure login button to open profile activity
+        Button loginBtn = (Button)findViewById(R.id.loginBtn);
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToProfile = new Intent(getApplicationContext(), MyProfileActivity.class);
+                startActivity(goToProfile);
+            }
+        });
+        //configure register button to open registration activity
+        Button registerBtn = (Button)findViewById(R.id.registerBtn);
+        registerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToRegistration = new Intent(getApplicationContext(), MyProfileActivity.class);
+                startActivity(goToRegistration);
+            }
+        });
     }
 
 }
