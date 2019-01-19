@@ -100,7 +100,6 @@ public class RegistrationActivity extends AppCompatActivity {
 
                 User nUser = new User(firstName, lastName, age, school, phone, email, password);
 
-                myRef = database.getReference("test");
                 myRef.child("Users").child(phone).setValue(nUser);
 
                 //Send User object to Firebase Database
