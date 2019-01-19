@@ -45,7 +45,7 @@
 
                 <ImageButton
                     android:id="@+id/profilePic"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="TODO"
                     tools:srcCompat="@tools:sample/avatars[0]" />
@@ -71,7 +71,7 @@
 
                 <ImageButton
                     android:id="@+id/profilePic3"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="TODO"
                     tools:srcCompat="@tools:sample/avatars[0]" />
@@ -84,7 +84,7 @@
 
                 <ImageButton
                     android:id="@+id/profilePic4"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="TODO"
                     tools:srcCompat="@tools:sample/avatars[0]" />
