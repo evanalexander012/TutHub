@@ -62,7 +62,7 @@ public class MainActivityLoginOrRegister extends AppCompatActivity {
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goToRegistration = new Intent(getApplicationContext(), MyProfileActivity.class);
+                Intent goToRegistration = new Intent(getApplicationContext(), RegistrationActivity.class);
                 startActivity(goToRegistration);
             }
         });
