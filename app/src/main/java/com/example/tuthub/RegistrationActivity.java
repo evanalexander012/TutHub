@@ -77,7 +77,7 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String firstNameGet = findViewById(R.id.etFirstName).toString();
-                String lastNameGet = findViewById(R.id.etLastName).toString()
+                String lastNameGet = findViewById(R.id.etLastName).toString();
                 String ageGet = findViewById(R.id.etAge).toString();
                 String schoolGet = findViewById(R.id.etSchool).toString();
                 String phoneGet= findViewById(R.id.etPhone).toString();
@@ -86,8 +86,21 @@ public class RegistrationActivity extends AppCompatActivity {
 
                 User nUser = new User(firstNameGet, lastNameGet, ageGet, schoolGet, phoneGet, emailGet, passwordGet);
 
-                System.out.print("dog");
+//                if(!firstNameGet.equals("") && !lastNameGet.equals("") && !ageGet.equals("") && !schoolGet.equals("")
+//                    && !phoneGet.equals("") && !emailGet.equals("") && !passwordGet.equals("")) {
+//
+//                } else {
+//
+//                }
 
+
+
+
+
+
+
+
+                //Send User object to Firebase Database
                 userRef.child("user").child(phoneGet).setValue(nUser);
 
 //                startActivity(new Intent(RegistrationActivity.this, .class));
