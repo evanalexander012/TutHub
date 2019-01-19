@@ -23,7 +23,7 @@ public class CreateTutorActivity extends AppCompatActivity {
                 case R.id.navigation_dashboard:
                     mTextMessage.setText(R.string.title_dashboard);
                     return true;
-                case R.id.navigation_notifications:
+                case R.id.navigation_profile:
                     mTextMessage.setText(R.string.title_notifications);
                     return true;
             }
