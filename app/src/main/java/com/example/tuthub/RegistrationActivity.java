@@ -26,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 public class RegistrationActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
-    DatabaseReference userRef;
+    DatabaseReference myRef;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -66,14 +66,13 @@ public class RegistrationActivity extends AppCompatActivity {
 //            }
 //        });
 
-        final FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();
-        userRef = userDatabase.getReference();
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        myRef = database.getReference();
 
         //Register Button
         Button register = (Button)findViewById(R.id.registerBtn);
         register.setOnClickListener(new View.OnClickListener()
         {
-
             @Override
             public void onClick(View v) {
                 String firstNameGet = findViewById(R.id.etFirstName).toString();
@@ -94,10 +93,11 @@ public class RegistrationActivity extends AppCompatActivity {
 //                }
 
 
-                userRef = userDatabase.getReference("user");
+                myRef = database.getReference("test");
+                myRef.setValue(nUser);
 
                 //Send User object to Firebase Database
-                userRef.child("user").child(phoneGet).setValue(nUser);
+                //userRef.child("user").child(phoneGet).setValue(nUser);
 
 //                startActivity(new Intent(RegistrationActivity.this, .class));
 //                Intent goToPRegistrationActivity = new Intent(getApplicationContext(), SignupActivity.class);
