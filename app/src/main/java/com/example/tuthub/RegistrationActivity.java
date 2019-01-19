@@ -8,7 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -47,10 +52,42 @@ public class RegistrationActivity extends AppCompatActivity {
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goToProfileActivity = new Intent(getApplicationContext(), ProfileActivity.class);
-                startActivity(goToProfileActivity);
+//                Intent goToProfileActivity = new Intent(getApplicationContext(), ProfileActivity.class);
+//                startActivity(goToProfileActivity);
+            }
+        });
+
+        FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference userRef = userDatabase.getReference();
+
+
+
+        //Register Button
+        findViewById(R.id.registerBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText firstNameEditText = findViewById(R.id.etFirstName);
+                EditText lastNameEditText = findViewById(R.id.etLastName);
+                EditText ageEditText = findViewById(R.id.etAge);
+                EditText schoolEditText = findViewById(R.id.etSchool);
+                EditText phoneEditText = findViewById(R.id.etPhone);
+                EditText emailEditText = findViewById(R.id.etEmail);
+                EditText passwordEditText = findViewById(R.id.etPassword);
+
+                User nUser = new User(firstNameEditText.toString(),
+                        lastNameEditText.toString(),
+                        ageEditText.toString(),
+                        schoolEditText.toString(),
+                        phoneEditText.toString(),
+                        emailEditText.toString(),
+                        passwordEditText.toString());
+
+                Intent goToPRegistrationActivity = new Intent(getApplicationContext(), SignupActivity.class);
+                startActivity(goToPRegistrationActivity);
+
             }
         });
     }
+
 
 }
