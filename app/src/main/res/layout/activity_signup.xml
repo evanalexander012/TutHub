@@ -14,6 +14,7 @@
         android:padding="15dp">
 
         <EditText
+            android:id="@+id/editTextPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:digits="0123456789"
@@ -43,14 +44,6 @@
             android:text="Sign In" />
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:digis="0123456789"
-        android:ems="10"
-        android:hint="Enter phone"
-        android:inputType="phone"/>
     <Button
         android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
