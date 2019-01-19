@@ -1,5 +1,6 @@
 package com.example.tuthub;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -38,8 +39,25 @@ public class SearchScreenActivity extends AppCompatActivity {
 
         TextView title = (TextView) findViewById(R.id.navigation_dashboard);
         title.setText("This is the dashboard page/search screen.");
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.navigation_home:
+                        Intent goToHome = new Intent(getApplicationContext(), TutorActivity.class);
+                        startActivity(goToHome);
+                        break;
+                    case R.id.navigation_profile:
+                        Intent goToProfile = new Intent(getApplicationContext(), ProfileActivity.class);
+                        startActivity(goToProfile);
+                        break;
+
+
+                }
+                return false;
+            }
+        });
     }
 
 }
