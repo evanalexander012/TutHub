@@ -114,7 +114,7 @@ public class SignupActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         editTextCode = findViewById(R.id.editTextCode);
-        editTextPhone = findViewById(R.id.editTextPhone);
+        //editTextPhone = findViewById(R.id.editTextPhone);
 
         findViewById(R.id.buttonGetVerificationCode).setOnClickListener(new View.OnClickListener() { //Verification Code
             @Override
@@ -132,23 +132,23 @@ public class SignupActivity extends AppCompatActivity {
 
 
         //Temp button to move to Tutor Page
-        Button openTutorActivityBtn = (Button) findViewById(R.id.loginBtn);
-        Button openRegistrationActivityBtn = (Button) findViewById(R.id.signUpBtn);
-        openTutorActivityBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent openTutorActivity = new Intent(getApplicationContext(), TutorActivity.class);
-
-                startActivity(openTutorActivity);
-            }
-        });
-        openRegistrationActivityBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent openRegistrationActivity = new Intent(getApplicationContext(), RegistrationActivity.class);
-                startActivity(openRegistrationActivity);
-            }
-        });
+//        Button openTutorActivityBtn = (Button) findViewById(R.id.loginBtn);
+//        Button openRegistrationActivityBtn = (Button) findViewById(R.id.signUpBtn);
+//        openTutorActivityBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent openTutorActivity = new Intent(getApplicationContext(), TutorActivity.class);
+//
+//                startActivity(openTutorActivity);
+//            }
+//        });
+//        openRegistrationActivityBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent openRegistrationActivity = new Intent(getApplicationContext(), RegistrationActivity.class);
+//                startActivity(openRegistrationActivity);
+//            }
+//        });
     }
 }
 

@@ -48,14 +48,14 @@ public class RegistrationActivity extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        Button registerBtn = (Button) findViewById(R.id.registerBtn);
-        registerBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent goToProfileActivity = new Intent(getApplicationContext(), ProfileActivity.class);
-//                startActivity(goToProfileActivity);
-            }
-        });
+//        Button registerBtn = (Button) findViewById(R.id.registerBtn);
+//        registerBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                Intent goToProfileActivity = new Intent(getApplicationContext(), ProfileActivity.class);
+////                startActivity(goToProfileActivity);
+//            }
+//        });
 
         FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();
         DatabaseReference userRef = userDatabase.getReference();
@@ -82,6 +82,7 @@ public class RegistrationActivity extends AppCompatActivity {
                         emailEditText.toString(),
                         passwordEditText.toString());
 
+                startActivity(new Intent(RegistrationActivity.this, Pop.class));
                 Intent goToPRegistrationActivity = new Intent(getApplicationContext(), SignupActivity.class);
                 startActivity(goToPRegistrationActivity);
 

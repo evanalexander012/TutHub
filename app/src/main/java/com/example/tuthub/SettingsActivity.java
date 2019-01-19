@@ -3,6 +3,7 @@ package com.example.tuthub;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+//Test
 public class SettingsActivity extends AppCompatActivity {
 
     @Override
