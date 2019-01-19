@@ -127,12 +127,20 @@ public class SignupActivity extends AppCompatActivity {
 
         //Temp button to move to Tutor Page
         Button openTutorActivityBtn = (Button) findViewById(R.id.loginBtn);
+        Button openRegistrationActivityBtn = (Button) findViewById(R.id.signUpBtn);
         openTutorActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent openTutorActivity = new Intent(getApplicationContext(), TutorActivity.class);
 
                 startActivity(openTutorActivity);
+            }
+        });
+        openRegistrationActivityBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openRegistrationActivity = new Intent(getApplicationContext(), RegistrationActivity.class);
+                startActivity(openRegistrationActivity);
             }
         });
     }
