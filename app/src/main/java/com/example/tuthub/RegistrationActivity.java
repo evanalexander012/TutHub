@@ -105,7 +105,7 @@ public class RegistrationActivity extends AppCompatActivity {
         // inflate the layout of the popup window
         LayoutInflater inflater = (LayoutInflater)
                 getSystemService(LAYOUT_INFLATER_SERVICE);
-        View popupView = inflater.inflate(R.layout.activity_signup, null);
+        View popupView = inflater.inflate(R.layout.popup_profile, null);
 
         // create the popup window
         int width = LinearLayout.LayoutParams.WRAP_CONTENT;
