@@ -55,7 +55,7 @@ public class TutorActivity extends AppCompatActivity {
                         startActivity(goToDashboard);
                         break;
                     case R.id.navigation_profile:
-                        Intent goToProfile = new Intent(getApplicationContext(), ProfileActivity.class);
+                        Intent goToProfile = new Intent(getApplicationContext(), MyProfileActivity.class);
                         startActivity(goToProfile);
                         break;
 

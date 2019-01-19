@@ -30,7 +30,7 @@ public class MainActivityLoginOrRegister extends AppCompatActivity {
                     return true;
                 case R.id.navigation_profile:
                     mTextMessage.setText(R.string.title_notifications);
-                    Intent goToProfile = new Intent(getApplicationContext(), ProfileActivity.class);
+                    Intent goToProfile = new Intent(getApplicationContext(), MyProfileActivity.class);
                     startActivity(goToProfile);
                     return true;
             }

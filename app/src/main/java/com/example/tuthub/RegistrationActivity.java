@@ -52,7 +52,7 @@ public class RegistrationActivity extends AppCompatActivity {
 //        registerBtn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-////                Intent goToProfileActivity = new Intent(getApplicationContext(), ProfileActivity.class);
+////                Intent goToProfileActivity = new Intent(getApplicationContext(), MyProfileActivity.class);
 ////                startActivity(goToProfileActivity);
 //            }
 //        });

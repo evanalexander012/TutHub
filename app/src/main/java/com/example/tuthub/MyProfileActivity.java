@@ -10,9 +10,13 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class ProfileActivity extends AppCompatActivity {
+import com.google.firebase.database.DataSnapshot;
+
+public class MyProfileActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
+    private DataSnapshot mDataSnapshot;
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -39,15 +43,17 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_my_profile);
 
         final ImageButton settings = findViewById(R.id.settingsButton);
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ProfileActivity.this, SettingsActivity.class));
+                startActivity(new Intent(MyProfileActivity.this, SettingsActivity.class));
             }
         });
+
+
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);

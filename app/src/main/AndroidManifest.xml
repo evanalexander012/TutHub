@@ -28,7 +28,7 @@
             android:label="@string/title_activity_registration" />
         <activity android:name=".SignupActivity" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".MyProfileActivity"
             android:label="@string/title_activity_profile" />
         <activity
             android:name=".SearchScreenActivity"
