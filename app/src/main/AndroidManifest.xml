@@ -26,6 +26,11 @@
             android:label="@string/title_activity_registration" />
         <activity android:name=".SignupActivity">
         <activity android:name=".MainActivityLoginOrRegister"
+        <activity
+            android:name=".CreateTutorActivity"
+            android:label="@string/title_activity_create_tutor"></activity>
+        <activity
+            android:name=".MainActivityLoginOrRegister"
             android:label="@string/title_activity_main_login_or_register">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

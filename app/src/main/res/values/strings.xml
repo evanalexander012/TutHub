@@ -26,5 +26,6 @@
     <string name="title_activity_main__login_or_register">MainActivity_LoginOrRegister</string>
     <string name="title_activity_main_login_or_register">MainActivityLoginOrRegister</string>
     <string name="title_activity_search">Search</string>
+    <string name="title_activity_create_tutor">CreateTutorActivity</string>
 
 </resources>
