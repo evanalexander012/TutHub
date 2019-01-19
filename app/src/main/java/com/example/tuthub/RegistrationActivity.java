@@ -73,25 +73,19 @@ public class RegistrationActivity extends AppCompatActivity {
         findViewById(R.id.registerBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText firstNameEditText = findViewById(R.id.etFirstName);
-                EditText lastNameEditText = findViewById(R.id.etLastName);
-                EditText ageEditText = findViewById(R.id.etAge);
-                EditText schoolEditText = findViewById(R.id.etSchool);
-                EditText phoneEditText = findViewById(R.id.etPhone);
-                EditText emailEditText = findViewById(R.id.etEmail);
-                EditText passwordEditText = findViewById(R.id.etPassword);
+                String firstNameGet = findViewById(R.id.etFirstName).toString();
+                String lastNameGet = findViewById(R.id.etLastName).toString()
+                String ageGet = findViewById(R.id.etAge).toString();
+                String schoolGet = findViewById(R.id.etSchool).toString();
+                String phoneGet= findViewById(R.id.etPhone).toString();
+                String emailGet = findViewById(R.id.etEmail).toString();
+                String passwordGet = findViewById(R.id.etPassword).toString();
 
-                User nUser = new User(firstNameEditText.toString(),
-                        lastNameEditText.toString(),
-                        ageEditText.toString(),
-                        schoolEditText.toString(),
-                        phoneEditText.toString(),
-                        emailEditText.toString(),
-                        passwordEditText.toString());
+                User nUser = new User(firstNameGet, lastNameGet, ageGet, schoolGet, phoneGet, emailGet, passwordGet);
 
                 System.out.print("dog");
 
-                userRef.child("user").child(phoneEditText.toString()).setValue(nUser);
+                userRef.child("user").child(phoneGet).setValue(nUser);
 
 //                startActivity(new Intent(RegistrationActivity.this, .class));
 //                Intent goToPRegistrationActivity = new Intent(getApplicationContext(), SignupActivity.class);
