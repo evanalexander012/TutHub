@@ -1,5 +1,6 @@
 package com.example.tuthub;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -19,12 +20,18 @@ public class MainActivityLoginOrRegister extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     mTextMessage.setText(R.string.title_home);
+                    Intent goToHome = new Intent(getApplicationContext(), TutorActivity.class);
+                    startActivity(goToHome);
                     return true;
                 case R.id.navigation_dashboard:
                     mTextMessage.setText(R.string.title_dashboard);
+                    Intent goToDashboard = new Intent(getApplicationContext(), SearchScreenActivity.class);
+                    startActivity(goToDashboard);
                     return true;
                 case R.id.navigation_profile:
                     mTextMessage.setText(R.string.title_notifications);
+                    Intent goToProfile = new Intent(getApplicationContext(), ProfileActivity.class);
+                    startActivity(goToProfile);
                     return true;
             }
             return false;
