@@ -103,7 +103,7 @@ public class RegistrationActivity extends AppCompatActivity {
 //                startActivity(goToPRegistrationActivity);
 
                 //Trigger pop-up for phone verification when 'register' is pressed
-                //onButtonShowPopupWindowClick(v);
+                onButtonShowPopupWindowClick(v);
 
             }
         });
