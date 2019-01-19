@@ -44,11 +44,11 @@ public class TutorActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.navigation_dashboard:
-                        Intent goToDashboard = new Intent(TutorActivity.this, SearchScreenActivity.class);
+                        Intent goToDashboard = new Intent(getApplicationContext(), SearchScreenActivity.class);
                         startActivity(goToDashboard);
                         break;
                     case R.id.navigation_profile:
-                        Intent goToProfile = new Intent(TutorActivity.this, ProfileActivity.class);
+                        Intent goToProfile = new Intent(getApplicationContext(), ProfileActivity.class);
                         startActivity(goToProfile);
                         break;
 
