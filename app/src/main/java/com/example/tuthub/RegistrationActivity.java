@@ -70,7 +70,10 @@ public class RegistrationActivity extends AppCompatActivity {
 
 
         //Register Button
-        findViewById(R.id.registerBtn).setOnClickListener(new View.OnClickListener() {
+        Button register = (Button)findViewById(R.id.registerBtn);
+        register.setOnClickListener(new View.OnClickListener()
+        {
+
             @Override
             public void onClick(View v) {
                 String firstNameGet = findViewById(R.id.etFirstName).toString();
