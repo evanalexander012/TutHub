@@ -75,15 +75,13 @@ public class RegistrationActivity extends AppCompatActivity {
         {
             @Override
             public void onClick(View v) {
-                String firstNameGet = findViewById(R.id.etFirstName).toString();
-                String lastNameGet = findViewById(R.id.etLastName).toString();
-                String ageGet = findViewById(R.id.etAge).toString();
-                String schoolGet = findViewById(R.id.etSchool).toString();
-                String phoneGet= findViewById(R.id.etPhone).toString();
-                String emailGet = findViewById(R.id.etEmail).toString();
-                String passwordGet = findViewById(R.id.etPassword).toString();
-
-                User nUser = new User(firstNameGet, lastNameGet, ageGet, schoolGet, phoneGet, emailGet, passwordGet);
+                EditText firstNameGet = findViewById(R.id.etFirstName);
+                EditText lastNameGet = findViewById(R.id.etLastName);
+                EditText ageGet = findViewById(R.id.etAge);
+                EditText schoolGet = findViewById(R.id.etSchool);
+                EditText phoneGet= findViewById(R.id.etPhone);
+                EditText emailGet = findViewById(R.id.etEmail);
+                EditText passwordGet = findViewById(R.id.etPassword);
 
 //                if(!firstNameGet.equals("") && !lastNameGet.equals("") && !ageGet.equals("") && !schoolGet.equals("")
 //                    && !phoneGet.equals("") && !emailGet.equals("") && !passwordGet.equals("")) {
@@ -92,9 +90,18 @@ public class RegistrationActivity extends AppCompatActivity {
 //
 //                }
 
+                String firstName = firstNameGet.getText().toString();
+                String lastName = lastNameGet.getText().toString();
+                String age = ageGet.getText().toString();
+                String school = schoolGet.getText().toString();
+                String phone = phoneGet.getText().toString();
+                String email = emailGet.getText().toString();
+                String password = passwordGet.getText().toString();
+
+                User nUser = new User(firstName, lastName, age, school, phone, email, password);
 
                 myRef = database.getReference("test");
-                myRef.child("user").child(phoneGet).setValue(nUser);
+                myRef.child("Users").child(phone).setValue(nUser);
 
                 //Send User object to Firebase Database
                 //userRef.child("user").child(phoneGet).setValue(nUser);
