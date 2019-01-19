@@ -7,100 +7,137 @@
     android:layout_height="match_parent"
     tools:context=".SearchScreenActivity">
 
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/profilePic1"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    tools:srcCompat="@drawable/user_profile_pic" />
+
+                <TextView
+                    android:id="@+id/user_desc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/profilePic2"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    tools:srcCompat="@drawable/user_profile_pic" />
+
+                <TextView
+                    android:id="@+id/user_desc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/profilePic3"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    tools:srcCompat="@drawable/user_profile_pic" />
+
+                <TextView
+                    android:id="@+id/user_desc3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/profilePic4"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    tools:srcCompat="@drawable/user_profile_pic" />
+
+                <TextView
+                    android:id="@+id/user_desc4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/profilePic5"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    tools:srcCompat="@drawable/user_profile_pic" />
+
+                <TextView
+                    android:id="@+id/user_desc5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/profilePic6"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    tools:srcCompat="@drawable/user_profile_pic" />
+
+                <TextView
+                    android:id="@+id/user_desc6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
         android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/navigation" >
+        app:menu="@menu/navigation">
 
     </android.support.design.widget.BottomNavigationView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ScrollView
-            android:layout_width="395dp"
-            android:layout_height="458dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="209dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/profilePic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="TODO"
-                    android:src="@drawable/profile_pic"
-                    tools:srcCompat="@tools:sample/avatars[0]" />
-
-                <TextView
-                    android:id="@+id/userDescriptionTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="42dp"
-                    android:text="@string/textview" />
-
-                <ImageButton
-                    android:id="@+id/profilePic2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="TODO"
-                    android:src="@drawable/profile_pic"
-                    tools:srcCompat="@tools:sample/avatars[0]" />
-
-                <TextView
-                    android:id="@+id/userDescriptionTextView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="42dp"
-                    android:text="@string/textview" />
-
-                <ImageButton
-                    android:id="@+id/profilePic3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="TODO"
-                    android:src="@drawable/profile_pic"
-                    tools:srcCompat="@tools:sample/avatars[0]" />
-
-                <TextView
-                    android:id="@+id/userDescriptionTextView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="42dp"
-                    android:text="@string/textview" />
-
-                <ImageButton
-                    android:id="@+id/profilePic4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="TODO"
-                    android:src="@drawable/profile_pic"
-                    tools:srcCompat="@tools:sample/avatars[0]" />
-
-                <TextView
-                    android:id="@+id/userDescriptionTextView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="42dp"
-                    android:text="@string/textview" />
-
-            </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
