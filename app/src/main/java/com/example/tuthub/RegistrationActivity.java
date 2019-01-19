@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -20,6 +21,7 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -64,10 +66,8 @@ public class RegistrationActivity extends AppCompatActivity {
 //            }
 //        });
 
-        FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();
+        final FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();
         userRef = userDatabase.getReference();
-
-
 
         //Register Button
         Button register = (Button)findViewById(R.id.registerBtn);
@@ -94,10 +94,7 @@ public class RegistrationActivity extends AppCompatActivity {
 //                }
 
 
-
-
-
-
+                userRef = userDatabase.getReference("user");
 
 
                 //Send User object to Firebase Database
@@ -108,7 +105,7 @@ public class RegistrationActivity extends AppCompatActivity {
 //                startActivity(goToPRegistrationActivity);
 
                 //Trigger pop-up for phone verification when 'register' is pressed
-                onButtonShowPopupWindowClick(v);
+                //onButtonShowPopupWindowClick(v);
 
             }
         });
