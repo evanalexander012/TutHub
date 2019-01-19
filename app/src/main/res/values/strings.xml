@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">TutHub</string>
-    <string name="title_home">Profile Thingy</string>
-    <string name="title_dashboard">BenMadeChange</string>
-    <string name="title_notifications">Tutors Are Cool</string>
+    <string name="title_home">Tutor</string>
+    <string name="title_dashboard">Search</string>
+    <string name="title_notifications">Profile</string>
 </resources>
