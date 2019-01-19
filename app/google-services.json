@@ -15,11 +15,35 @@
       },
       "oauth_client": [
         {
+          "client_id": "584487104468-baeof504gni89lfpvufpvfqe80pra99e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tuthub",
+            "certificate_hash": "2eb3d997d12d34883bf417be15918fc17d69e647"
+          }
+        },
+        {
           "client_id": "584487104468-v4hdd2h0lm97gdmiq50k2u3gn7upat9a.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.tuthub",
             "certificate_hash": "d0f37eae166a833baec0f04458c1062199cd1436"
+          }
+        },
+        {
+          "client_id": "584487104468-sfj6eukmjtqtumhdinpfso1c268g4u2v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tuthub",
+            "certificate_hash": "59a0535c4a38d6073bfbcecba0368dd37c93efff"
+          }
+        },
+        {
+          "client_id": "584487104468-oovsg6t6508in2jh0skjmobb688rjbu8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tuthub",
+            "certificate_hash": "e6763fe053f2da4a06e6dd627f0587289805c531"
           }
         },
         {
@@ -40,7 +64,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "584487104468-v6n7n9qfqa4petl9lg59nnilffsfb9a9.apps.googleusercontent.com",
+              "client_id": "584487104468-1n1kskqor3s3uk9pv5k49un7rpje3n8s.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
