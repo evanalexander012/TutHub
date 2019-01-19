@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-//import com.example.tuthub.R;
-//import com.example.tuthub.TutorActivity;
+import com.example.tuthub.R;
+import com.example.tuthub.TutorActivity;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
