@@ -1,26 +1,22 @@
 package com.example.tuthub;
 
 
+import java.util.ArrayList;
+
 public class User {
 
     private String  FirstName,
                     LastName,
-                    Age,
-                    School,
+
                     PhoneNum,
-                    Email,
                     Password;
 
-
-
-    public User(String firstName, String lastName, String age, String school, String phoneNum, String email, String password)
+    public User(String firstName, String lastName,
+                String phoneNum, String password)
     {
                 FirstName = firstName;
                 LastName = lastName;
-                Age = age;
-                School = school;
                 PhoneNum = phoneNum;
-                Email = email;
                 Password = password;
     }
 

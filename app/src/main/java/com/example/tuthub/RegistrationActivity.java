@@ -23,6 +23,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 public class RegistrationActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
@@ -75,31 +77,22 @@ public class RegistrationActivity extends AppCompatActivity {
         {
             @Override
             public void onClick(View v) {
+                //Get info from EditTexts
                 EditText firstNameGet = findViewById(R.id.etFirstName);
                 EditText lastNameGet = findViewById(R.id.etLastName);
-                EditText ageGet = findViewById(R.id.etAge);
-                EditText schoolGet = findViewById(R.id.etSchool);
                 EditText phoneGet= findViewById(R.id.etPhone);
-                EditText emailGet = findViewById(R.id.etEmail);
                 EditText passwordGet = findViewById(R.id.etPassword);
 
-//                if(!firstNameGet.equals("") && !lastNameGet.equals("") && !ageGet.equals("") && !schoolGet.equals("")
-//                    && !phoneGet.equals("") && !emailGet.equals("") && !passwordGet.equals("")) {
-//
-//                } else {
-//
-//                }
-
+                //Convert text from EditTexts to strings
                 String firstName = firstNameGet.getText().toString();
                 String lastName = lastNameGet.getText().toString();
-                String age = ageGet.getText().toString();
-                String school = schoolGet.getText().toString();
                 String phone = phoneGet.getText().toString();
-                String email = emailGet.getText().toString();
                 String password = passwordGet.getText().toString();
 
-                User nUser = new User(firstName, lastName, age, school, phone, email, password);
+                //Create new User
+                User nUser = new User(firstName, lastName, phone, password);
 
+                //Sends User object to Firebase
                 myRef.child("Users").child(phone).setValue(nUser);
 
                 //Send User object to Firebase Database
