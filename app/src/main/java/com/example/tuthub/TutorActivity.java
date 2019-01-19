@@ -24,7 +24,7 @@ public class TutorActivity extends AppCompatActivity {
                 case R.id.navigation_dashboard:
                     mTextMessage.setText(R.string.title_dashboard);
                     return true;
-                case R.id.navigation_notifications:
+                case R.id.navigation_profile:
                     mTextMessage.setText(R.string.title_notifications);
                     return true;
             }
@@ -47,9 +47,9 @@ public class TutorActivity extends AppCompatActivity {
                         Intent goToDashboard = new Intent(TutorActivity.this, SearchScreenActivity.class);
                         startActivity(goToDashboard);
                         break;
-                    case R.id.navigation_notifications:
-                        Intent goToNotifications = new Intent(TutorActivity.this, SearchScreenActivity.class);
-                        startActivity(goToNotifications);
+                    case R.id.navigation_profile:
+                        Intent goToProfile = new Intent(TutorActivity.this, ProfileActivity.class);
+                        startActivity(goToProfile);
                         break;
 
 
