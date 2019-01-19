@@ -31,6 +31,46 @@ public class SignupActivity extends AppCompatActivity {
 
     String codeSent;
 
+    public void testPhoneVerify() {
+        // [START auth_test_phone_verify]
+        String phoneNum = "6165551234";
+        String testVerificationCode = "123456";
+
+        // Whenever verification is triggered with the whitelisted number,
+        // provided it is not set for auto-retrieval, onCodeSent will be triggered.
+        PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                phoneNum, 30L /*timeout*/, TimeUnit.SECONDS,
+                this, new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+
+                    @Override
+                    public void onCodeSent(String verificationId,
+                                           PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                        // Save the verification id somewhere
+                        // ...
+
+                        // The corresponding whitelisted code above should be used to complete sign-in.
+                        SignupActivity.this.enableUserManuallyInputCode();
+                    }
+
+                    @Override
+                    public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
+                        // Sign in with the credential
+                        // ...
+                    }
+
+                    @Override
+                    public void onVerificationFailed(FirebaseException e) {
+                        // ...
+                    }
+
+                });
+        // [END auth_test_phone_verify]
+    }
+
+    private void enableUserManuallyInputCode() {
+        // No-op
+    }
+
     PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
         @Override
@@ -97,6 +137,8 @@ public class SignupActivity extends AppCompatActivity {
             editTextPhone.requestFocus();
             return;
         }
+
+        testPhoneVerify();
 
     }
 
