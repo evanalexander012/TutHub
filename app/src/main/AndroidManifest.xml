@@ -15,19 +15,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity
-            android:name=".MainActivityLoginOrRegister"
-            android:label="@string/title_activity_main_login_or_register"></activity>
-        <activity
-            android:name=".RegistrationActivity"
-            android:label="@string/title_activity_registration" />
-        <activity android:name=".SignupActivity">
+        <activity android:name=".MainActivityLoginOrRegister"
+            android:label="@string/title_activity_main_login_or_register">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".RegistrationActivity"
+            android:label="@string/title_activity_registration" />
+        <activity android:name=".SignupActivity" />
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile" />
