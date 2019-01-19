@@ -23,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class RegistrationActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
+    DatabaseReference userRef;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -63,7 +64,7 @@ public class RegistrationActivity extends AppCompatActivity {
 //        });
 
         FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference userRef = userDatabase.getReference();
+        userRef = userDatabase.getReference();
 
 
 
@@ -87,6 +88,10 @@ public class RegistrationActivity extends AppCompatActivity {
                         emailEditText.toString(),
                         passwordEditText.toString());
 
+                System.out.print("dog");
+
+                userRef.child("user").child(phoneEditText.toString()).setValue(nUser);
+
 //                startActivity(new Intent(RegistrationActivity.this, .class));
 //                Intent goToPRegistrationActivity = new Intent(getApplicationContext(), SignupActivity.class);
 //                startActivity(goToPRegistrationActivity);
@@ -96,6 +101,8 @@ public class RegistrationActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
 
 
