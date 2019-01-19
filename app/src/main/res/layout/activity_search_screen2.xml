@@ -49,6 +49,7 @@
                     android:id="@+id/profilePic2"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
+                    android:src="@drawable/user_profile_pic"
                     tools:src="@drawable/user_profile_pic"
                     tools:srcCompat="@drawable/user_profile_pic" />
 
@@ -67,6 +68,7 @@
                     android:id="@+id/profilePic3"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
+                    android:src="@drawable/user_profile_pic"
                     tools:src="@drawable/user_profile_pic"
                     tools:srcCompat="@drawable/user_profile_pic" />
 
@@ -85,6 +87,7 @@
                     android:id="@+id/profilePic4"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
+                    android:src="@drawable/user_profile_pic"
                     tools:src="@drawable/user_profile_pic"
                     tools:srcCompat="@drawable/user_profile_pic" />
 
@@ -103,6 +106,7 @@
                     android:id="@+id/profilePic5"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
+                    android:src="@drawable/user_profile_pic"
                     tools:src="@drawable/user_profile_pic"
                     tools:srcCompat="@drawable/user_profile_pic" />
 
@@ -121,7 +125,7 @@
                     android:id="@+id/profilePic6"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
-                    tools:src="@drawable/user_profile_pic"
+                    app:srcCompat="@drawable/user_profile_pic"
                     tools:srcCompat="@drawable/user_profile_pic" />
 
                 <TextView
