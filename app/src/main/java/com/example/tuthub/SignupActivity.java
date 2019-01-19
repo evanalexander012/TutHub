@@ -16,12 +16,11 @@ public class LoginActivity extends AppCompatActivity {
         openTutorActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent openTutorActivity = new Intent(getApplicationContext(),TutorActivity.class);
+                Intent openTutorActivity = new Intent(getApplicationContext(), TutorActivity.class);
 
                 startActivity(openTutorActivity);
             }
         });
-        }
-
-        }
+    }
+}
 
