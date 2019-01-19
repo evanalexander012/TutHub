@@ -16,9 +16,6 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".MainActivity_LoginOrRegister"
-            android:label="@string/title_activity_main__login_or_register" />
-        <activity
             android:name=".RegistrationActivity"
             android:label="@string/title_activity_registration" />
         <activity android:name=".SignupActivity">
