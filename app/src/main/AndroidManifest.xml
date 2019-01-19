@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".SearchScreenActivity"
+            android:label="@string/title_activity_search_screen"></activity>
+        <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"></activity>
         <activity android:name=".SearchScreenActivity" />
