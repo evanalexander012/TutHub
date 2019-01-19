@@ -16,6 +16,7 @@
         <activity
             android:name=".RegistrationActivity"
             android:label="@string/title_activity_registration"></activity>
+        <activity android:name=".SettingsActivity"></activity>
         <activity android:name=".SignupActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
