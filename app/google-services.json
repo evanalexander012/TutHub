@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "584487104468",
+    "firebase_url": "https://tuthub-95d40.firebaseio.com",
+    "project_id": "tuthub-95d40",
+    "storage_bucket": "tuthub-95d40.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584487104468:android:c24a0e989f82cc22",
+        "android_client_info": {
+          "package_name": "com.example.tuthub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584487104468-v4hdd2h0lm97gdmiq50k2u3gn7upat9a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tuthub",
+            "certificate_hash": "d0f37eae166a833baec0f04458c1062199cd1436"
+          }
+        },
+        {
+          "client_id": "584487104468-1n1kskqor3s3uk9pv5k49un7rpje3n8s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB74DczeBwejjSMNyPRCb25_FYldkTqhvA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584487104468-v6n7n9qfqa4petl9lg59nnilffsfb9a9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
