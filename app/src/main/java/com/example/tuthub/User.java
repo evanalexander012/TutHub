@@ -7,7 +7,6 @@ public class User {
 
     private String  FirstName,
                     LastName,
-
                     PhoneNum,
                     Password;
 
