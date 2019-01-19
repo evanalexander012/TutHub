@@ -82,7 +82,7 @@ public class RegistrationActivity extends AppCompatActivity {
                         emailEditText.toString(),
                         passwordEditText.toString());
 
-//                startActivity(new Intent(RegistrationActivity.this, Pop.class));
+//                startActivity(new Intent(RegistrationActivity.this, .class));
 //                Intent goToPRegistrationActivity = new Intent(getApplicationContext(), SignupActivity.class);
 //                startActivity(goToPRegistrationActivity);
 
