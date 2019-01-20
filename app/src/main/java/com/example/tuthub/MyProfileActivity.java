@@ -28,6 +28,8 @@ public class MyProfileActivity extends AppCompatActivity {
     private String UserPhone = MainActivityLoginOrRegister.USERPHONE;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference ref = database.getReference("Users");
+    TextView classesTextView = (TextView) findViewById(R.id.ClassesTextView);
+    TextView availabilityTextView = (TextView) findViewById(R.id.AvailabilityTextView);
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
