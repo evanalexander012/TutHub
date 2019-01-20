@@ -16,8 +16,11 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:name=".TutorProfileActivity"
+            android:label="@string/title_activity_tutor_profile"></activity>
+        <activity
             android:name=".CreateTutorActivity"
-            android:label="@string/title_activity_create_tutor"></activity>
+            android:label="@string/title_activity_create_tutor" />
         <activity
             android:name=".MainActivityLoginOrRegister"
             android:label="@string/title_activity_main_login_or_register">

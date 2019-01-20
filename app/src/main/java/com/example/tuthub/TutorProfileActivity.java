@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 
-public class MyProfileActivity extends AppCompatActivity {
+public class TutorProfileActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
     private DataSnapshot mDataSnapshot;
@@ -41,7 +41,7 @@ public class MyProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_profile);
+        setContentView(R.layout.activity_tutor_profile);
         //configure button to go to settings
         final ImageButton settings = findViewById(R.id.settingsButton);
         settings.setOnClickListener(new View.OnClickListener() {
@@ -52,8 +52,8 @@ public class MyProfileActivity extends AppCompatActivity {
         });
 
         mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        BottomNavigationView TutBottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        TutBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
