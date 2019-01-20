@@ -31,5 +31,14 @@ public class SettingsActivity extends AppCompatActivity {
                 startActivity(goToCreateTutor);
             }
         });
+
+        Button logoutBtn = (Button) findViewById(R.id.logoutBtn);
+        logoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToMain = new Intent(getApplicationContext(), MainActivityLoginOrRegister.class);
+                startActivity(goToMain);
+            }
+        });
     }
 }
