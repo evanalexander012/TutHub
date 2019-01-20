@@ -79,7 +79,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Available times"
+            android:text="Mon. - 	\n Tue. -	1pm - 3pm\n Wed. - 	4pm - 8pm\n Thu. - 	\n Fri.	-	\n Sat.  - 	12am - 1pm\n Sun. -"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
