@@ -11,12 +11,23 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+
+
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
 
 public class MyProfileActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
     private DataSnapshot mDataSnapshot;
+    private String UserPhone = MainActivityLoginOrRegister.USERPHONE;
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference ref = database.getReference("Users");
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -52,6 +63,24 @@ public class MyProfileActivity extends AppCompatActivity {
         });
 
         mTextMessage = (TextView) findViewById(R.id.message);
+
+        ref.child(UserPhone).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                  //set the current user name in profile
+
+                TextView profileName = findViewById(R.id.profileName);
+                profileName.setText(dataSnapshot.child("name").getValue(String.class));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -62,7 +91,7 @@ public class MyProfileActivity extends AppCompatActivity {
                         startActivity(goToDashboard);
                         break;
                     case R.id.navigation_home:
-                        Intent goToHome = new Intent(getApplicationContext(), CreateTutorActivity.class);
+                        Intent goToHome = new Intent(getApplicationContext(), TutorActivity.class);
                         startActivity(goToHome);
                         break;
                 }

@@ -21,6 +21,7 @@
     <string name="user_profile_pic">User Profile Pic</string>
     <string name="user_info">User info will go here</string>
     <string name="textview">TextView</string>
+    <string name="profile_name">placeholder</string>
     <string name="placeholder"></string>
     <string name="title_activity_registration">RegistrationActivity</string>
     <string name="title_activity_main__login_or_register">MainActivity_LoginOrRegister</string>

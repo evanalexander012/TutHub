@@ -2,6 +2,7 @@ package com.example.tuthub;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,7 +27,10 @@ public class MainActivityLoginOrRegister extends AppCompatActivity {
     private TextView mTextMessage;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference ref = database.getReference("Users");
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
     private String Word;
+    public static String USERPHONE;
 
     private String getRealPhone()
     {
@@ -39,6 +45,8 @@ public class MainActivityLoginOrRegister extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_login_or_register);
+
+
 
         mTextMessage = (TextView) findViewById(R.id.message);
         //configure login button to open profile activity
@@ -56,6 +64,8 @@ public class MainActivityLoginOrRegister extends AppCompatActivity {
                 ref.child(getRealPhone()).addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        //set the current user information...
+
                         Word = dataSnapshot.child("password").getValue(String.class);
                     }
 
@@ -66,15 +76,14 @@ public class MainActivityLoginOrRegister extends AppCompatActivity {
                 });
 
                 if(realPass.equals(Word)){
+                    USERPHONE = getRealPhone();
+
                     Intent goToProfile = new Intent(getApplicationContext(), MyProfileActivity.class);
                     startActivity(goToProfile);
                 }
                 else{
 
                 }
-
-                Intent goToSearch = new Intent(getApplicationContext(), SearchScreenActivity.class);
-                startActivity(goToSearch);
 
             }
         });
