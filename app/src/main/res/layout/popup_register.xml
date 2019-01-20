@@ -25,8 +25,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="50dp"
+            android:background="@color/colorPrimaryDark"
             android:text="Get Verification Code"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/btn_login_bg" />
 
         <EditText
             android:id="@+id/editTextCode"
@@ -40,7 +42,9 @@
             android:id="@+id/buttonSignIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign Up" />
+            android:background="@color/colorPrimaryDark"
+            android:text="Sign Up"
+            android:textColor="@color/btn_login_bg" />
 
         <!--<Button-->
         <!--android:id="@+id/signUpBtn"-->
