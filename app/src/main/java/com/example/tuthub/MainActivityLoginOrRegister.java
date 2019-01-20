@@ -41,7 +41,7 @@ public class MainActivityLoginOrRegister extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     mTextMessage.setText(R.string.title_home);
-                    Intent goToHome = new Intent(getApplicationContext(), TutorActivity.class);
+                    Intent goToHome = new Intent(getApplicationContext(), CreateTutorActivity.class);
                     startActivity(goToHome);
                     return true;
                 case R.id.navigation_dashboard:
@@ -99,6 +99,8 @@ public class MainActivityLoginOrRegister extends AppCompatActivity {
 
                 }
 
+                Intent goToSearch = new Intent(getApplicationContext(), SearchScreenActivity.class);
+                startActivity(goToSearch);
 
             }
         });

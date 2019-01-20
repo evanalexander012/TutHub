@@ -131,7 +131,7 @@
                     android:id="@+id/user_desc1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Evan Alexander"
+                    android:text="Ben Townsend"
                     android:textSize="24sp" />
             </TableRow>
 
@@ -223,7 +223,7 @@
                     android:id="@+id/user_desc5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ben Townsend"
+                    android:text="Evan Alexander"
                     android:textSize="24sp"/>
             </TableRow>
 

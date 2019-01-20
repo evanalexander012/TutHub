@@ -18,9 +18,14 @@ public class User {
                 LastName = lastName;
                 PhoneNum = phoneNum;
                 Password = password;
+
     }
 
     public String getName(){return FirstName + " " + LastName;}
+
+    public void setClasses(ArrayList<String> classCodes){
+        Classes = classCodes;
+    }
 
     public String getPhoneNum(){return PhoneNum;}
 
