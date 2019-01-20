@@ -95,54 +95,47 @@ public class RegistrationActivity extends AppCompatActivity {
                 //Sends User object to Firebase
                 myRef.child("Users").child(phone).setValue(nUser);
 
-                //Send User object to Firebase Database
-                //userRef.child("user").child(phoneGet).setValue(nUser);
-
-//                startActivity(new Intent(RegistrationActivity.this, .class));
-//                Intent goToPRegistrationActivity = new Intent(getApplicationContext(), SignupActivity.class);
-//                startActivity(goToPRegistrationActivity);
-
                 //Trigger pop-up for phone verification when 'register' is pressed
-                onButtonShowPopupWindowClick(v);
-
-            }
-        });
-
-
-    }
-
-
-
-    public void onButtonShowPopupWindowClick(View view) {
-
-        // inflate the layout of the popup window
-        LayoutInflater inflater = (LayoutInflater)
-                getSystemService(LAYOUT_INFLATER_SERVICE);
-        View popupView = inflater.inflate(R.layout.popup_register, null);
-
-        // create the popup window
-        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
-        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-        boolean focusable = true; // lets taps outside the popup also dismiss it
-        final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            popupWindow.setElevation(20);
-        }
-
-        // show the popup window
-        // which view you pass in doesn't matter, it is only used for the window tolken
-        popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
-
-        // dismiss the popup window when touched
-        popupView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                popupWindow.dismiss();
-                return true;
+//                onButtonShowPopupWindowClick(v);
             }
         });
     }
 
+//    public void onButtonShowPopupWindowClick(View view) {
+//        // inflate the layout of the popup window
+//        LayoutInflater inflater = (LayoutInflater)
+//                getSystemService(LAYOUT_INFLATER_SERVICE);
+//        View popupView = inflater.inflate(R.layout.popup_register, null);
+//
+//        // create the popup window
+//        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+//        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+//        boolean focusable = true; // lets taps outside the popup also dismiss it
+//        final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
+//
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//            popupWindow.setElevation(20);
+//        }
+//
+//        // show the popup window
+//        // which view you pass in doesn't matter, it is only used for the window tolken
+//        popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+//
+//        // dismiss the popup window when touched
+//        popupView.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                popupWindow.dismiss();
+//                return true;
+//            }
+//        });
 
+//        Button signup = (Button)findViewById(R.id.buttonSignUp);
+//        signup.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
+//    }
 }

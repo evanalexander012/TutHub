@@ -13,6 +13,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 public class SearchScreenActivity extends AppCompatActivity {
@@ -41,8 +42,13 @@ public class SearchScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //TableRow t1 = findViewById(R.id.profileTab1);
+        //t1.setVisibility(View.INVISIBLE);
+
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_screen2);
+        setContentView(R.layout.activity_search);
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);

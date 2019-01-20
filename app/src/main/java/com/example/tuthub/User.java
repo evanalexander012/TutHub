@@ -1,6 +1,5 @@
 package com.example.tuthub;
 
-
 import java.util.ArrayList;
 
 public class User {
@@ -9,6 +8,8 @@ public class User {
                     LastName,
                     PhoneNum,
                     Password;
+
+    private ArrayList<String> Classes;
 
     public User(String firstName, String lastName,
                 String phoneNum, String password)
