@@ -31,5 +31,6 @@
     <string name="title_activity_tutor_profile">TutorProfileActivity</string>
 
     <string name="first_entry">Ben Townsend</string>
+    <string name="select_the_classes_you_can_tutor">Select the classes you can tutor</string>
 
 </resources>

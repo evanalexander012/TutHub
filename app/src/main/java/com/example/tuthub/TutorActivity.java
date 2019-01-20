@@ -83,7 +83,6 @@ public class TutorActivity extends AppCompatActivity {
         // Get reference of widgets from XML layout
         final RelativeLayout rl = (RelativeLayout) findViewById(R.id.rl);
         Button btn = (Button) findViewById(R.id.btn);
-        final TextView tv = (TextView) findViewById(R.id.tv);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,6 +110,7 @@ public class TutorActivity extends AppCompatActivity {
 
                 // Convert the color array to list
                 final List<String> subjectsList = Arrays.asList(subjects);
+
 
                 // Set multiple choice items for alert dialog
                 /*
@@ -169,12 +169,20 @@ public class TutorActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // Do something when click positive button
-                        tv.setText("Subjects:");
                         for (int i = 0; i<checkedSubjects.length; i++){
                             boolean checked = checkedSubjects[i];
                             if (checked) {
+
                             }
                         }
+                    }
+                });
+
+                // Set the negative/no button click listener
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do something when click the negative button
                     }
                 });
 
@@ -209,18 +217,29 @@ public class TutorActivity extends AppCompatActivity {
                 String SuAvail = SuA.getText().toString();
 
                 //Add availability strings to new array list
-                ArrayList<String> availabilityList = new ArrayList<>();
-                availabilityList.add(MAvail);
-                availabilityList.add(TAvail);
-                availabilityList.add(WAvail);
-                availabilityList.add(ThAvail);
-                availabilityList.add(FAvail);
-                availabilityList.add(SAvail);
-                availabilityList.add(SuAvail);
+                ArrayList<String> tempList = new ArrayList<>();
+                tempList.add(MAvail);
+                tempList.add(TAvail);
+                tempList.add(WAvail);
+                tempList.add(ThAvail);
+                tempList.add(FAvail);
+                tempList.add(SAvail);
+                tempList.add(SuAvail);
+                final ArrayList<String> availabilityList = tempList;
 
                 //Set user availability and subjects
                 U.setAvailability(availabilityList);
                 U.setClasses(subjectsList);
+
+//                Button confirm = (Button) findViewById(R.id.confirmBtn);
+//                confirm.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        //Set user availability and subjects
+//                        U.setAvailability(availabilityList);
+//                        U.setClasses(subjectsList);
+//                    }
+//                });
             }
         });
     }
