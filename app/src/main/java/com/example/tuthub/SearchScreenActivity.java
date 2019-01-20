@@ -90,7 +90,7 @@ public class SearchScreenActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.profileTab1).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.profilePic1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onButtonShowPopupWindowClick(v);
