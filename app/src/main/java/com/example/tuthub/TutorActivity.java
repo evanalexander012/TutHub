@@ -74,9 +74,6 @@ public class TutorActivity extends AppCompatActivity {
             }
         });
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tutor);
-
         // Get reference of widgets from XML layout
         final RelativeLayout rl = (RelativeLayout) findViewById(R.id.rl);
         Button btn = (Button) findViewById(R.id.btn);
