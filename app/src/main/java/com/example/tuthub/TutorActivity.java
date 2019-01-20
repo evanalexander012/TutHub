@@ -121,7 +121,7 @@ public class TutorActivity extends AppCompatActivity {
                         false // IAH
                 };
 
-                // Convert the color array to list
+                // Convert the class array to list
                 final List<String> classList = Arrays.asList(subjects);
 
                 // Set multiple choice items for alert dialog
@@ -230,7 +230,7 @@ public class TutorActivity extends AppCompatActivity {
 
                         //Set user availability and subjects
 //                        U.setAvailability(availabilityList);
-//                        U.setClasses(subjectsList);
+//                        U.setClasses((ArrayList<String>)classList);
                     }
                 });
             }
