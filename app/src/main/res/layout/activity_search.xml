@@ -128,11 +128,12 @@
                     tools:srcCompat="@drawable/user_profile_pic" />
 
                 <TextView
-                    android:id="@+id/user_desc1"
+                    android:id="@+id/user_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Ben Townsend"
                     android:textSize="24sp" />
+
             </TableRow>
 
             <TableRow
