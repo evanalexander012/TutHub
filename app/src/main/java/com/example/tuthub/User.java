@@ -9,7 +9,7 @@ public class User {
                     PhoneNum,
                     Password;
 
-    private ArrayList<String> Classes;
+    private ArrayList<String> Classes, Availablity;
 
     public User(String firstName, String lastName,
                 String phoneNum, String password)
@@ -18,6 +18,10 @@ public class User {
                 LastName = lastName;
                 PhoneNum = phoneNum;
                 Password = password;
+                Availablity = new ArrayList<>();
+                Availablity.add(null);
+                Classes = new ArrayList<>();
+                Classes.add(null);
 
     }
 
@@ -26,6 +30,8 @@ public class User {
     public void setClasses(ArrayList<String> classCodes){
         Classes = classCodes;
     }
+
+    public void setAvailability(ArrayList<String> availability){ Availablity= availability;}
 
     public String getPhoneNum(){return PhoneNum;}
 

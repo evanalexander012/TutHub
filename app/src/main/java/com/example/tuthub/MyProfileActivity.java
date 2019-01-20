@@ -71,6 +71,15 @@ public class MyProfileActivity extends AppCompatActivity {
 
                 TextView profileName = findViewById(R.id.profileName);
                 profileName.setText(dataSnapshot.child("name").getValue(String.class));
+
+
+                //Show classes that you/others will tutor
+                TextView classesTutored = findViewById(R.id.tvClasses);
+                classesTutored.setText(dataSnapshot.child("classes").getValue(String.class));
+
+                TextView availability = findViewById(R.id.tvAvailability);
+                availability.setText(dataSnapshot.child("availability").getValue(String.class));
+
             }
 
             @Override
