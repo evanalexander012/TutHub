@@ -62,7 +62,7 @@ public class MyProfileActivity extends AppCompatActivity {
                         startActivity(goToDashboard);
                         break;
                     case R.id.navigation_home:
-                        Intent goToHome = new Intent(getApplicationContext(), TutorActivity.class);
+                        Intent goToHome = new Intent(getApplicationContext(), CreateTutorActivity.class);
                         startActivity(goToHome);
                         break;
                 }
