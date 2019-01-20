@@ -75,6 +75,7 @@ public class RegistrationActivity extends AppCompatActivity {
         Button register = (Button)findViewById(R.id.registerBtn);
         register.setOnClickListener(new View.OnClickListener()
         {
+
             @Override
             public void onClick(View v) {
                 //Get info from EditTexts

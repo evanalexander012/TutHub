@@ -19,9 +19,9 @@
     <string name="title_activity_search_screen">SearchScreenActivity</string>
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="user_profile_pic">User Profile Pic</string>
-    <string name="placeholder">Placeholder</string>
     <string name="user_info">User info will go here</string>
     <string name="textview">TextView</string>
+    <string name="placeholder"></string>
     <string name="title_activity_registration">RegistrationActivity</string>
     <string name="title_activity_main__login_or_register">MainActivity_LoginOrRegister</string>
     <string name="title_activity_main_login_or_register">MainActivityLoginOrRegister</string>
