@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -95,6 +96,12 @@ public class RegistrationActivity extends AppCompatActivity {
 
                 //Sends User object to Firebase
                 myRef.child("Users").child(phone).setValue(nUser);
+
+                Intent goToLogin = new Intent(getApplicationContext(), MainActivityLoginOrRegister.class);
+                startActivity(goToLogin);
+
+                Toast confirmation = Toast.makeText(getApplicationContext(), "Thank you for registering, please sign in", Toast.LENGTH_SHORT);
+                confirmation.show();
 
                 //Trigger pop-up for phone verification when 'register' is pressed
 //                onButtonShowPopupWindowClick(v);
