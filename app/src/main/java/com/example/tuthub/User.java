@@ -1,6 +1,7 @@
 package com.example.tuthub;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class User {
 
@@ -9,7 +10,8 @@ public class User {
                     PhoneNum,
                     Password;
 
-    private ArrayList<String> Classes;
+    private List<String> Classes,
+                         Availability;
 
     public User(String firstName, String lastName,
                 String phoneNum, String password)
@@ -23,9 +25,11 @@ public class User {
 
     public String getName(){return FirstName + " " + LastName;}
 
-    public void setClasses(ArrayList<String> classCodes){
-        Classes = classCodes;
+    public void setClasses(List<String> classes){
+        Classes = classes;
     }
+
+    public void setAvailability(List<String> availability) { Availability = availability ; }
 
     public String getPhoneNum(){return PhoneNum;}
 

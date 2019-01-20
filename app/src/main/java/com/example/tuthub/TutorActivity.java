@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,12 +22,17 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class TutorActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
+    private String UserPhone = MainActivityLoginOrRegister.USERPHONE;
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference ref = database.getReference("Users");
+    private User U;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -86,12 +92,12 @@ public class TutorActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(TutorActivity.this);
 
                 // String array for alert dialog multi choice items
-                String[] subjects = new String[]{
-                        "CSE",
-                        "MTH",
-                        "BUS",
-                        "CAS",
-                        "IAH"
+                final String[] subjects = new String[]{
+                        "CSE 331",
+                        "MTH 132",
+                        "BUS 190",
+                        "CAS 117",
+                        "IAH 241A"
                 };
 
                 // Boolean array for initial selected items
@@ -124,6 +130,18 @@ public class TutorActivity extends AppCompatActivity {
                         which The position of the item in the list that was clicked.
                         isChecked True if the click checked the item, else false.
                  */
+                ref.child(UserPhone).addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                       U = dataSnapshot.getValue(User.class); //Gets user object from Firebase
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
                 builder.setMultiChoiceItems(subjects, checkedSubjects, new DialogInterface.OnMultiChoiceClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which, boolean isChecked) {
@@ -155,7 +173,6 @@ public class TutorActivity extends AppCompatActivity {
                         for (int i = 0; i<checkedSubjects.length; i++){
                             boolean checked = checkedSubjects[i];
                             if (checked) {
-                                tv.setText(tv.getText() + subjectsList.get(i) + "\n");
                             }
                         }
                     }
@@ -172,6 +189,38 @@ public class TutorActivity extends AppCompatActivity {
                 AlertDialog dialog = builder.create();
                 // Display the alert dialog on interface
                 dialog.show();
+
+                //Read Availability PlainTexts
+                EditText MA = findViewById(R.id.MAPlainText);
+                EditText TA = findViewById(R.id.TAPlainText);
+                EditText WA = findViewById(R.id.WAPlainText);
+                EditText ThA = findViewById(R.id.ThAPlainText);
+                EditText FA = findViewById(R.id.FAPlainText);
+                EditText SA = findViewById(R.id.SAPlainText);
+                EditText SuA = findViewById(R.id.SuAPlainText);
+
+                //EditTexts to strings
+                String MAvail = MA.getText().toString();
+                String TAvail = TA.getText().toString();
+                String WAvail = WA.getText().toString();
+                String ThAvail = ThA.getText().toString();
+                String FAvail = FA.getText().toString();
+                String SAvail = SA.getText().toString();
+                String SuAvail = SuA.getText().toString();
+
+                //Add availability strings to new array list
+                ArrayList<String> availabilityList = new ArrayList<>();
+                availabilityList.add(MAvail);
+                availabilityList.add(TAvail);
+                availabilityList.add(WAvail);
+                availabilityList.add(ThAvail);
+                availabilityList.add(FAvail);
+                availabilityList.add(SAvail);
+                availabilityList.add(SuAvail);
+
+                //Set user availability and subjects
+                U.setAvailability(availabilityList);
+                U.setClasses(subjectsList);
             }
         });
     }
