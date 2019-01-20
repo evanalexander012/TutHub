@@ -27,7 +27,7 @@ public class SettingsActivity extends AppCompatActivity {
         becomeTutor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goToCreateTutor = new Intent(getApplicationContext(),CreateTutorActivity.class);
+                Intent goToCreateTutor = new Intent(getApplicationContext(), TutorActivity.class);
                 startActivity(goToCreateTutor);
             }
         });
