@@ -19,9 +19,9 @@ public class User {
                 PhoneNum = phoneNum;
                 Password = password;
                 Availablity = new ArrayList<>();
-                Availablity.add(null);
+                Availablity.add("");
                 Classes = new ArrayList<>();
-                Classes.add(null);
+                Classes.add("");
 
     }
 
@@ -36,5 +36,9 @@ public class User {
     public String getPhoneNum(){return PhoneNum;}
 
     public String getPassword(){return Password;}
+
+    public ArrayList<String> getClasses(){return Classes;}
+
+    public ArrayList<String> getAvailablity(){return Availablity;}
 
 }
