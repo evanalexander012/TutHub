@@ -43,11 +43,7 @@ public class Search extends AppCompatActivity {
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText testing1EditText = (EditText) findViewById(R.id.testing1EditText);
-                EditText testing2EditText = (EditText) findViewById(R.id.testing2EditText);
 
-                String test1 = testing1EditText.getText().toString();
-                String test2 = testing2EditText.getText().toString();
             }
         });
 
