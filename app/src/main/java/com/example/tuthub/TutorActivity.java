@@ -59,6 +59,19 @@ public class TutorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutor);
 
+
+//        ref.child(UserPhone).addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                U = dataSnapshot.getValue(User.class); //Get user object from Firebase
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//            }
+//        });
+
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -73,16 +86,16 @@ public class TutorActivity extends AppCompatActivity {
                         Intent goToProfile = new Intent(getApplicationContext(), MyProfileActivity.class);
                         startActivity(goToProfile);
                         break;
-
-
                 }
                 return false;
             }
         });
 
+
         // Get reference of widgets from XML layout
         final RelativeLayout rl = (RelativeLayout) findViewById(R.id.rl);
         Button btn = (Button) findViewById(R.id.btn);
+        final TextView tv = (TextView) findViewById(R.id.tv);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,7 +104,7 @@ public class TutorActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(TutorActivity.this);
 
                 // String array for alert dialog multi choice items
-                final String[] subjects = new String[]{
+                String[] subjects = new String[]{
                         "CSE 331",
                         "MTH 132",
                         "BUS 190",
@@ -109,8 +122,7 @@ public class TutorActivity extends AppCompatActivity {
                 };
 
                 // Convert the color array to list
-                final List<String> subjectsList = Arrays.asList(subjects);
-
+                final List<String> classList = Arrays.asList(subjects);
 
                 // Set multiple choice items for alert dialog
                 /*
@@ -130,18 +142,6 @@ public class TutorActivity extends AppCompatActivity {
                         which The position of the item in the list that was clicked.
                         isChecked True if the click checked the item, else false.
                  */
-                ref.child(UserPhone).addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                       U = dataSnapshot.getValue(User.class); //Gets user object from Firebase
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
-
                 builder.setMultiChoiceItems(subjects, checkedSubjects, new DialogInterface.OnMultiChoiceClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which, boolean isChecked) {
@@ -150,7 +150,7 @@ public class TutorActivity extends AppCompatActivity {
                         checkedSubjects[which] = isChecked;
 
                         // Get the current focused item
-                        String currentItem = subjectsList.get(which);
+                        String currentItem = classList.get(which);
 
                         // Notify the current action
                         Toast.makeText(getApplicationContext(),
@@ -169,20 +169,13 @@ public class TutorActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // Do something when click positive button
+                        tv.setText("Subjects:");
                         for (int i = 0; i<checkedSubjects.length; i++){
                             boolean checked = checkedSubjects[i];
                             if (checked) {
-
+                                tv.setText(tv.getText() + classList.get(i) + "\n");
                             }
                         }
-                    }
-                });
-
-                // Set the negative/no button click listener
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Do something when click the negative button
                     }
                 });
 
@@ -198,48 +191,48 @@ public class TutorActivity extends AppCompatActivity {
                 // Display the alert dialog on interface
                 dialog.show();
 
-                //Read Availability PlainTexts
-                EditText MA = findViewById(R.id.MAPlainText);
-                EditText TA = findViewById(R.id.TAPlainText);
-                EditText WA = findViewById(R.id.WAPlainText);
-                EditText ThA = findViewById(R.id.ThAPlainText);
-                EditText FA = findViewById(R.id.FAPlainText);
-                EditText SA = findViewById(R.id.SAPlainText);
-                EditText SuA = findViewById(R.id.SuAPlainText);
+                Button submit = (Button) findViewById(R.id.submitBtn);
+                submit.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //Read Availability PlainTexts
+                        EditText MA = findViewById(R.id.MAPlainText);
+                        EditText TA = findViewById(R.id.TAPlainText);
+                        EditText WA = findViewById(R.id.WAPlainText);
+                        EditText ThA = findViewById(R.id.ThAPlainText);
+                        EditText FA = findViewById(R.id.FAPlainText);
+                        EditText SA = findViewById(R.id.SAPlainText);
+                        EditText SuA = findViewById(R.id.SuAPlainText);
 
-                //EditTexts to strings
-                String MAvail = MA.getText().toString();
-                String TAvail = TA.getText().toString();
-                String WAvail = WA.getText().toString();
-                String ThAvail = ThA.getText().toString();
-                String FAvail = FA.getText().toString();
-                String SAvail = SA.getText().toString();
-                String SuAvail = SuA.getText().toString();
+                        //EditTexts to strings
+                        String MAvail = MA.getText().toString();
+                        String TAvail = TA.getText().toString();
+                        String WAvail = WA.getText().toString();
+                        String ThAvail = ThA.getText().toString();
+                        String FAvail = FA.getText().toString();
+                        String SAvail = SA.getText().toString();
+                        String SuAvail = SuA.getText().toString();
 
-                //Add availability strings to new array list
-                ArrayList<String> tempList = new ArrayList<>();
-                tempList.add(MAvail);
-                tempList.add(TAvail);
-                tempList.add(WAvail);
-                tempList.add(ThAvail);
-                tempList.add(FAvail);
-                tempList.add(SAvail);
-                tempList.add(SuAvail);
-                final ArrayList<String> availabilityList = tempList;
+                        //Add availability strings to new array list
+                        ArrayList<String> tempList = new ArrayList<>();
+                        tempList.add(MAvail);
+                        tempList.add(TAvail);
+                        tempList.add(WAvail);
+                        tempList.add(ThAvail);
+                        tempList.add(FAvail);
+                        tempList.add(SAvail);
+                        tempList.add(SuAvail);
+                        final ArrayList<String> availabilityList = tempList;
 
-                //Set user availability and subjects
-                U.setAvailability(availabilityList);
-                U.setClasses(subjectsList);
+                        //Used to see if data is being stored into ArrayLists
+                        //Toast.makeText(TutorActivity.this, classList.toString(), Toast.LENGTH_LONG).show();
+                        //Toast.makeText(TutorActivity.this, availabilityList.toString(), Toast.LENGTH_LONG).show();
 
-//                Button confirm = (Button) findViewById(R.id.confirmBtn);
-//                confirm.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        //Set user availability and subjects
+                        //Set user availability and subjects
 //                        U.setAvailability(availabilityList);
 //                        U.setClasses(subjectsList);
-//                    }
-//                });
+                    }
+                });
             }
         });
     }
