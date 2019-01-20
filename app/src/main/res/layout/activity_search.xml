@@ -5,6 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:background="@color/bg_login"
     tools:context=".Search">
 
     <android.support.design.widget.BottomNavigationView
@@ -156,7 +157,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Spencer Buquicchio"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
             </TableRow>
 
             <TableRow
@@ -179,7 +180,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Will Dixon"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
             </TableRow>
 
             <TableRow
@@ -202,7 +203,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Ryan Felten"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
             </TableRow>
 
             <TableRow
@@ -225,7 +226,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Evan Alexander"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
             </TableRow>
 
             <TableRow
@@ -247,7 +248,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Bradley from DOW"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
             </TableRow>
 
         </TableLayout>
