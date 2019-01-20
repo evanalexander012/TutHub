@@ -11,10 +11,9 @@
         android:id="@+id/navigation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
         android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/navigation" />
@@ -30,7 +29,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
-        android:hint="Seach"
+        android:hint="Search"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +49,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimaryDark"
-        android:text="Button"
+        android:text="Search"
         android:textColor="@color/btn_login_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,5 +95,161 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/testing1EditText"
         app:layout_constraintVertical_bias="0.062" />
+
+    <ScrollView
+        android:layout_width="412dp"
+        android:layout_height="408dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TableRow
+                android:id="@+id/profileTab1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:background="@color/btn_login_bg">
+
+                <ImageView
+                    android:id="@+id/profilePic1"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/user_profile_pic"
+                    tools:srcCompat="@drawable/user_profile_pic" />
+
+                <TextView
+                    android:id="@+id/user_desc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Evan Alexander"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/profileTab2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:background="@color/btn_login_bg">
+
+                <ImageView
+                    android:id="@+id/profilePic2"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/user_profile_pic"
+                    tools:src="@drawable/user_profile_pic"
+                    tools:srcCompat="@drawable/user_profile_pic" />
+
+                <TextView
+                    android:id="@+id/user_desc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spencer Buquicchio"
+                    android:textSize="24sp"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/profileTab3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:background="@color/btn_login_bg">
+
+                <ImageView
+                    android:id="@+id/profilePic3"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/user_profile_pic"
+                    tools:src="@drawable/user_profile_pic"
+                    tools:srcCompat="@drawable/user_profile_pic" />
+
+                <TextView
+                    android:id="@+id/user_desc3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Will Dixon"
+                    android:textSize="24sp"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/profileTab4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:background="@color/btn_login_bg">
+
+                <ImageView
+                    android:id="@+id/profilePic4"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/user_profile_pic"
+                    tools:src="@drawable/user_profile_pic"
+                    tools:srcCompat="@drawable/user_profile_pic" />
+
+                <TextView
+                    android:id="@+id/user_desc4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ryan Felten"
+                    android:textSize="24sp"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/profileTab5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:background="@color/btn_login_bg">
+
+                <ImageView
+                    android:id="@+id/profilePic5"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:src="@drawable/user_profile_pic"
+                    tools:src="@drawable/user_profile_pic"
+                    tools:srcCompat="@drawable/user_profile_pic" />
+
+                <TextView
+                    android:id="@+id/user_desc5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ben Townsend"
+                    android:textSize="24sp"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/profileTab6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:background="@color/btn_login_bg">
+
+                <ImageView
+                    android:id="@+id/profilePic6"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    app:srcCompat="@drawable/user_profile_pic"
+                    tools:srcCompat="@drawable/user_profile_pic" />
+
+                <TextView
+                    android:id="@+id/user_desc6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bradley from DOW"
+                    android:textSize="24sp"/>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
