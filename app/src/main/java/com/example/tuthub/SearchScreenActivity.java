@@ -11,10 +11,15 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TableRow;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SearchScreenActivity extends AppCompatActivity {
 
@@ -43,12 +48,25 @@ public class SearchScreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        //TableRow t1 = findViewById(R.id.profileTab1);
-        //t1.setVisibility(View.INVISIBLE);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
+        User Evan = new User("Evan","Alexander","6166481810","123456");
+        ArrayList<String> classes = new ArrayList<>();
+        classes.add(("CSE"));
+        classes.add(("MTH"));
+        classes.add(("ENG"));
+        Evan.setClasses(classes);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+        Button searchBtn = findViewById(R.id.searchBtn);
+        searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((TextView)findViewById(R.id.user_desc1)).setText("Evan Alexander");
+            }
+        });
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);

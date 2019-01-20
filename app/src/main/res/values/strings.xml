@@ -29,4 +29,6 @@
     <string name="title_activity_create_tutor">CreateTutorActivity</string>
     <string name="title_activity_tutor_profile">TutorProfileActivity</string>
 
+    <string name="first_entry">Ben Townsend</string>
+
 </resources>
