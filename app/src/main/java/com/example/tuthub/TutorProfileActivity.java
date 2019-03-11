@@ -13,10 +13,14 @@ import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 
+import org.w3c.dom.Text;
+
 public class TutorProfileActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
     private DataSnapshot mDataSnapshot;
+    TextView TutClassesTextView = (TextView) findViewById(R.id.TutClassesTextView);
+    TextView TutAvailabilityTextView = (TextView) findViewById(R.id.TutAvailabilityTextView);
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {

@@ -17,10 +17,10 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".TutorProfileActivity"
-            android:label="@string/title_activity_tutor_profile"></activity>
+            android:label="Tüthub"></activity>
         <activity
             android:name=".MainActivityLoginOrRegister"
-            android:label="@string/title_activity_main_login_or_register">
+            android:label="Tüthub">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,14 +29,14 @@
         </activity>
         <activity
             android:name=".RegistrationActivity"
-            android:label="@string/title_activity_registration" />
+            android:label="Tüthub" />
         <activity android:name=".SignupActivity" />
         <activity
             android:name=".MyProfileActivity"
-            android:label="@string/title_activity_profile" />
+            android:label="Tüthub" />
         <activity
             android:name=".SearchScreenActivity"
-            android:label="@string/title_activity_search_screen" />
+            android:label="Tüthub" />
         <activity
             android:name=".TutorActivity"
             android:label="@string/app_name">

@@ -28,6 +28,8 @@ public class MyProfileActivity extends AppCompatActivity {
     private String UserPhone = MainActivityLoginOrRegister.USERPHONE;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference ref = database.getReference("Users");
+    //TextView classesTextView = (TextView) findViewById(R.id.ClassesTextView);
+    //TextView availabilityTextView = (TextView) findViewById(R.id.AvailabilityTextView);
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -72,13 +74,13 @@ public class MyProfileActivity extends AppCompatActivity {
                 TextView profileName = findViewById(R.id.profileName);
                 profileName.setText(dataSnapshot.child("name").getValue(String.class));
 
-
-                //Show classes that you/others will tutor
-                TextView classesTutored = findViewById(R.id.tvClasses);
-                classesTutored.setText(dataSnapshot.child("classes").getValue(String.class));
-
-                TextView availability = findViewById(R.id.tvAvailability);
-                availability.setText(dataSnapshot.child("availability").getValue(String.class));
+//
+//                //Show classes that you/others will tutor
+//                TextView classesTutored = findViewById(R.id.tvClasses);
+//                classesTutored.setText(dataSnapshot.child("classes").getValue(String.class));
+//
+//                TextView availability = findViewById(R.id.tvAvailability);
+//                availability.setText(dataSnapshot.child("availability").getValue(String.class));
 
             }
 

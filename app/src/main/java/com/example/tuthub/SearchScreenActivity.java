@@ -18,6 +18,7 @@ import android.widget.PopupWindow;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,7 +52,7 @@ public class SearchScreenActivity extends AppCompatActivity {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
         User Evan = new User("Evan","Alexander","6166481810","123456");
-        ArrayList<String> classes = new ArrayList<>();
+        final ArrayList<String> classes = new ArrayList<>();
         classes.add(("CSE"));
         classes.add(("MTH"));
         classes.add(("ENG"));

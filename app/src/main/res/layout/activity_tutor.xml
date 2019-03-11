@@ -5,6 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_login"
     tools:context=".TutorActivity">
 
     <android.support.design.widget.BottomNavigationView
@@ -37,7 +38,7 @@
         android:id="@+id/rl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#037714"
+        android:background="@color/bg_login"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
