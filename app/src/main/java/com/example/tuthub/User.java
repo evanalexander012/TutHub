@@ -11,6 +11,7 @@ public class User {
 
     private ArrayList<String> Classes, Availablity;
 
+    
     public User(String firstName, String lastName,
                 String phoneNum, String password)
     {
